@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mustafa Official Website</title>
+
+    <meta name="description" content="Ahmad official site for learning and downloads">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #1e293b;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #334155;
+        }
+
+        nav a {
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background: #ef4444;
+        }
+
+        section {
+            display: none;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .active {
+            display: block;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #ef4444;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mustafa Official Website 🚀</h1>
+</header>
+
+<nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('downloads')">Downloads</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('contact')">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Learn programming and download useful tools</p>
+    <button onclick="showPage('downloads')">Go to Downloads</button>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="downloads">
+    <h2>Downloads</h2>
+    <p>Useful tools:</p>
+    <button onclick="downloadMsg()">Download Tool 1</button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Mustafa, learning programming and building websites 💻</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <input type="text" placeholder="Your Name"><br><br>
+    <input type="email" placeholder="Your Email"><br><br>
+    <textarea placeholder="Your Message"></textarea><br><br>
+
+    <button onclick="sendMessage()">Send</button>
+</section>
+
+<script>
+function showPage(pageId) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    document.getElementById(pageId).classList.add("active");
+}
+
+function sendMessage() {
+    alert("Message sent successfully ✅");
+}
+
+function downloadMsg() {
+    alert("Download started (demo) 📥");
+}
+</script>
+
+</body>
+</html>
