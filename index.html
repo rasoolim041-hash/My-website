@@ -79,6 +79,14 @@
 <section id="home" class="active">
     <h2>Welcome</h2>
     <p>Learn programming and download useful tools</p>
+
+    <!-- 🎵 MUSIC -->
+    <h3>🎵 Listen to Music</h3>
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
     <button onclick="showPage('downloads')">Go to Downloads</button>
 </section>
 
@@ -86,7 +94,16 @@
 <section id="downloads">
     <h2>Downloads</h2>
     <p>Useful tools:</p>
+
     <button onclick="downloadMsg()">Download Tool 1</button>
+
+    <br><br>
+
+    <!-- ⬇️ MUSIC DOWNLOAD -->
+    <h3>⬇️ Download Music</h3>
+    <a href="music.mp3" download>
+        <button>Download Song</button>
+    </a>
 </section>
 
 <!-- ABOUT -->
@@ -115,7 +132,6 @@ function showPage(pageId) {
 }
 
 function sendMessage() {
-   function sendMessage() {
     let name = document.querySelector("input[type='text']").value;
     let email = document.querySelector("input[type='email']").value;
     let message = document.querySelector("textarea").value;
@@ -134,12 +150,12 @@ function sendMessage() {
 
     alert("پیام ذخیره شد در دیتابیس ✅");
 }
-}
 
 function downloadMsg() {
-    alert("Download started (demo) 📥");
+    alert("Download started 📥");
 }
 </script>
+
 <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
@@ -157,5 +173,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 </script>
+
 </body>
 </html>
